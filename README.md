@@ -64,3 +64,8 @@ To query `document.pdf` from the first page, excluding the last two, using mixtr
 ```bash
 python query.py document.pdf "What is the data used in this paper?" -s 0 -e "-2" -m mixtral -t 0.2
 ```
+
+### Start app in poetry
+```
+poetry run streamlit run doc_app.py
+```
