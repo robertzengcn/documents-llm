@@ -69,3 +69,14 @@ python query.py document.pdf "What is the data used in this paper?" -s 0 -e "-2"
 ```
 poetry run streamlit run doc_app.py
 ```
+
+### Call ollama
+```
+curl -X POST https://api.ollama.com/v1/endpoint \
+     -H "Authorization: Bearer <YOUR_API_KEY>" \
+     -H "Content-Type: application/json" \
+     -d '{
+           "model": "your_model_name",
+           "input": "your_input_data"
+         }'
+```
