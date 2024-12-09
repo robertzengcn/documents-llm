@@ -72,11 +72,10 @@ poetry run streamlit run doc_app.py
 
 ### Call ollama
 ```
-curl -X POST https://api.ollama.com/v1/endpoint \
-     -H "Authorization: Bearer <YOUR_API_KEY>" \
+curl -X POST http://host.docker.internal:11434/v1 \
      -H "Content-Type: application/json" \
      -d '{
-           "model": "your_model_name",
-           "input": "your_input_data"
+           "model": "mixtral:latest",
+           "input": "what is your name"
          }'
 ```
