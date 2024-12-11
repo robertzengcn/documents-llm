@@ -5,14 +5,14 @@ from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 
 
-def summarize_document(
+def extract_document(
     docs: list[Document],
     model_name: str,
     openai_api_key: str,
     base_url: str,
     temperature: float = 0.1,
 ) -> str:
-    
+    pass
 
     # Define LLM chain
     llm = ChatOpenAI(
@@ -22,7 +22,7 @@ def summarize_document(
         base_url=base_url,
     )
 
-    prompt_template = """Write a long summary of the following document. 
+    prompt_template = """Extra buyer's information from following document. 
     Only include information that is part of the document. 
     Do not include your own opinion or analysis.
 

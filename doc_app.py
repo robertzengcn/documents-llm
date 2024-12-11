@@ -47,7 +47,7 @@ with st.sidebar:
 
     st.subheader("Query type")
 
-    query_type = st.radio("Select the query type", ["Summarize", "Query"])
+    query_type = st.radio("Select the query type", ["Summarize", "Query","Extract"])
 
 
 if query_type == "Query":
