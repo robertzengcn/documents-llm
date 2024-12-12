@@ -12,7 +12,7 @@ def summarize_document(
     base_url: str,
     temperature: float = 0.1,
 ) -> str:
-    
+    pass
 
     # Define LLM chain
     llm = ChatOpenAI(

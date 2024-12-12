@@ -22,7 +22,7 @@ def extract_document(
         base_url=base_url,
     )
 
-    prompt_template = """Extra buyer's information from following document. 
+    prompt_template = """Extra billing information or shipping to from following document. 
     Only include information that is part of the document. 
     Do not include your own opinion or analysis.
 
@@ -30,7 +30,7 @@ def extract_document(
     "{document}"
     Summary:"""
     prompt = PromptTemplate.from_template(prompt_template)
-
+    print(prompt)
     llm_chain = LLMChain(llm=llm, prompt=prompt)
 
     stuff_chain = StuffDocumentsChain(
