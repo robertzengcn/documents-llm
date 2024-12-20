@@ -5,6 +5,7 @@ import streamlit as st
 from .document import load_pdf
 from .query import query_document
 from .summarize import summarize_document
+from .extract import extract_document
 
 
 def save_uploaded_file(
@@ -44,10 +45,9 @@ def run_query(
             base_url=openai_url,
             temperature=temperature,
         )
-    st.write("Querying the document...")
-    return query_document(
+    st.write("Extra information from the document...")
+    return extract_document(
         docs,
-        user_query=user_query,
         model_name=model_name,
         openai_api_key=openai_api_key,
         base_url=openai_url,
