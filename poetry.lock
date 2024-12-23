@@ -758,13 +758,13 @@ uvicorn = {version = ">=0.18.3", extras = ["standard"]}
 
 [[package]]
 name = "click"
-version = "8.1.7"
+version = "8.1.8"
 description = "Composable command line interface toolkit"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "click-8.1.7-py3-none-any.whl", hash = "sha256:ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28"},
-    {file = "click-8.1.7.tar.gz", hash = "sha256:ca9853ad459e787e2192211578cc907e7594e294c7ccc834310722b41b9ca6de"},
+    {file = "click-8.1.8-py3-none-any.whl", hash = "sha256:63c132bbbed01578a06712a2d1f497bb62d9c1c0d329b7903a866228027263b2"},
+    {file = "click-8.1.8.tar.gz", hash = "sha256:ed53c9d8990d83c2a27deae68e4ee337473f6330c040a31d4225c9574d16096a"},
 ]
 
 [package.dependencies]
@@ -1467,13 +1467,13 @@ test = ["Cython (>=0.29.24)"]
 
 [[package]]
 name = "httpx"
-version = "0.28.1"
+version = "0.27.2"
 description = "The next generation HTTP client."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "httpx-0.28.1-py3-none-any.whl", hash = "sha256:d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad"},
-    {file = "httpx-0.28.1.tar.gz", hash = "sha256:75e98c5f16b0f35b567856f597f06ff2270a374470a5c2392242528e3e3e42fc"},
+    {file = "httpx-0.27.2-py3-none-any.whl", hash = "sha256:7bb2708e112d8fdd7829cd4243970f0c223274051cb35ee80c03301ee29a3df0"},
+    {file = "httpx-0.27.2.tar.gz", hash = "sha256:f7c2be1d2f3c3c3160d441802406b206c2b76f5947b11115e6df10c6c65e66c2"},
 ]
 
 [package.dependencies]
@@ -1481,6 +1481,7 @@ anyio = "*"
 certifi = "*"
 httpcore = "==1.*"
 idna = "*"
+sniffio = "*"
 
 [package.extras]
 brotli = ["brotli", "brotlicffi"]
@@ -1729,13 +1730,13 @@ testing = ["Django", "attrs", "colorama", "docopt", "pytest (<9.0.0)"]
 
 [[package]]
 name = "jinja2"
-version = "3.1.4"
+version = "3.1.5"
 description = "A very fast and expressive template engine."
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "jinja2-3.1.4-py3-none-any.whl", hash = "sha256:bc5dd2abb727a5319567b7a813e6a2e7318c39f4f487cfe6c89c6f9c7d25197d"},
-    {file = "jinja2-3.1.4.tar.gz", hash = "sha256:4a3aee7acbbe7303aede8e9648d13b8bf88a429282aa6122a993f0ac800cb369"},
+    {file = "jinja2-3.1.5-py3-none-any.whl", hash = "sha256:aba0f4dc9ed8013c424088f68a5c226f7d6097ed89b246d7749c2ec4175c6adb"},
+    {file = "jinja2-3.1.5.tar.gz", hash = "sha256:8fefff8dc3034e27bb80d67c671eb8a9bc424c0ef4c0826edbff304cceff43bb"},
 ]
 
 [package.dependencies]
@@ -2284,6 +2285,21 @@ tenacity = ">=8.1.0,<8.4.0 || >8.4.0,<9.0.0"
 typing-extensions = ">=4.7"
 
 [[package]]
+name = "langchain-ollama"
+version = "0.1.3"
+description = "An integration package connecting Ollama and LangChain"
+optional = false
+python-versions = "<4.0,>=3.8.1"
+files = [
+    {file = "langchain_ollama-0.1.3-py3-none-any.whl", hash = "sha256:e4017178b2fbf822c74b29eaca3732c925265a63d9dd9fe6970c34fd32568c4a"},
+    {file = "langchain_ollama-0.1.3.tar.gz", hash = "sha256:cc5f3d510e591cb66b382f4fe32801877593c0d0a1dc48e9e8fcd16b8e01c454"},
+]
+
+[package.dependencies]
+langchain-core = ">=0.2.36,<0.3.0"
+ollama = ">=0.3.0,<1"
+
+[[package]]
 name = "langchain-openai"
 version = "0.1.25"
 description = "An integration package connecting OpenAI and LangChain"
@@ -2741,17 +2757,17 @@ files = [
 
 [[package]]
 name = "narwhals"
-version = "1.19.0"
+version = "1.19.1"
 description = "Extremely lightweight compatibility layer between dataframe libraries"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "narwhals-1.19.0-py3-none-any.whl", hash = "sha256:517eca140103dbf61e4513fe462885a06bc21b565521a5ac0b79a7e31f152efe"},
-    {file = "narwhals-1.19.0.tar.gz", hash = "sha256:a1a03bf922548ed1da5426acc954327a94c02c3a08558b65a0937dbd3b77fb48"},
+    {file = "narwhals-1.19.1-py3-none-any.whl", hash = "sha256:72476dcc95f1d3f2c0c1f047cdd4879346b2871fe13d1223025466d8a3dcaea4"},
+    {file = "narwhals-1.19.1.tar.gz", hash = "sha256:e597e7ed9da42ffb2c80b21e174817b27592a8570edea8c46c90a726e3b796af"},
 ]
 
 [package.extras]
-cudf = ["cudf (>=23.08.00)"]
+cudf = ["cudf (>=24.12.0)"]
 dask = ["dask[dataframe] (>=2024.7)"]
 dev = ["covdefaults", "dask[dataframe]", "duckdb", "hypothesis", "hypothesis[numpy]", "pandas", "polars", "pyarrow", "pyarrow-stubs", "pyspark", "pytest", "pytest-cov", "pytest-env", "pytest-randomly", "scikit-learn", "tqdm", "typing-extensions"]
 docs = ["black", "duckdb", "jinja2", "markdown-exec[ansi]", "mkdocs", "mkdocs-autorefs", "mkdocs-material", "mkdocstrings[python]", "pandas", "polars (>=1.0.0)", "pyarrow"]
@@ -2854,18 +2870,18 @@ files = [
 
 [[package]]
 name = "notebook"
-version = "7.3.1"
+version = "7.3.2"
 description = "Jupyter Notebook - A web-based notebook environment for interactive computing"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "notebook-7.3.1-py3-none-any.whl", hash = "sha256:212e1486b2230fe22279043f33c7db5cf9a01d29feb063a85cb139747b7c9483"},
-    {file = "notebook-7.3.1.tar.gz", hash = "sha256:84381c2a82d867517fd25b86e986dae1fe113a70b98f03edff9b94e499fec8fa"},
+    {file = "notebook-7.3.2-py3-none-any.whl", hash = "sha256:e5f85fc59b69d3618d73cf27544418193ff8e8058d5bf61d315ce4f473556288"},
+    {file = "notebook-7.3.2.tar.gz", hash = "sha256:705e83a1785f45b383bf3ee13cb76680b92d24f56fb0c7d2136fe1d850cd3ca8"},
 ]
 
 [package.dependencies]
 jupyter-server = ">=2.4.0,<3"
-jupyterlab = ">=4.3.2,<4.4"
+jupyterlab = ">=4.3.4,<4.4"
 jupyterlab-server = ">=2.27.1,<3"
 notebook-shim = ">=0.2,<0.3"
 tornado = ">=6.2.0"
@@ -2952,6 +2968,21 @@ files = [
 rsa = ["cryptography (>=3.0.0)"]
 signals = ["blinker (>=1.4.0)"]
 signedtoken = ["cryptography (>=3.0.0)", "pyjwt (>=2.0.0,<3)"]
+
+[[package]]
+name = "ollama"
+version = "0.4.4"
+description = "The official Python client for Ollama."
+optional = false
+python-versions = "<4.0,>=3.8"
+files = [
+    {file = "ollama-0.4.4-py3-none-any.whl", hash = "sha256:0f466e845e2205a1cbf5a2fef4640027b90beaa3b06c574426d8b6b17fd6e139"},
+    {file = "ollama-0.4.4.tar.gz", hash = "sha256:e1db064273c739babc2dde9ea84029c4a43415354741b6c50939ddd3dd0f7ffb"},
+]
+
+[package.dependencies]
+httpx = ">=0.27.0,<0.28.0"
+pydantic = ">=2.9.0,<3.0.0"
 
 [[package]]
 name = "onnxruntime"
@@ -5351,13 +5382,13 @@ dev = ["flake8", "flake8-annotations", "flake8-bandit", "flake8-bugbear", "flake
 
 [[package]]
 name = "urllib3"
-version = "2.2.3"
+version = "2.3.0"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 files = [
-    {file = "urllib3-2.2.3-py3-none-any.whl", hash = "sha256:ca899ca043dcb1bafa3e262d73aa25c465bfb49e0bd9dd5d59f1d0acba2f8fac"},
-    {file = "urllib3-2.2.3.tar.gz", hash = "sha256:e7d814a81dad81e6caf2ec9fdedb284ecc9c73076b62654547cc64ccdcae26e9"},
+    {file = "urllib3-2.3.0-py3-none-any.whl", hash = "sha256:1cee9ad369867bfdbbb48b7dd50374c0967a0bb7710050facf0dd6911440e3df"},
+    {file = "urllib3-2.3.0.tar.gz", hash = "sha256:f8c5449b3cf0861679ce7e0503c7b44b5ec981bec0d1d3795a07f1ba96f0204d"},
 ]
 
 [package.extras]
@@ -5897,4 +5928,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "f73cec09453da2b3003068f528abe164db67042efc56e016fb752f2f28dd8e66"
+content-hash = "533a6803f28a7daf9e35b320255e20d758d44eb690cb0f4d6384da2248afc01b"
