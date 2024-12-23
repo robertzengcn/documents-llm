@@ -11,7 +11,7 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain.chains.retrieval import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
-from langchain_community.llms import Ollama
+from langchain_ollama import ChatOllama
 # from langchain_core.output_parsers import JsonOutputParser
 
 
@@ -26,13 +26,17 @@ def extract_document(
 
     # parser = JsonOutputParser(pydantic_object=Order)
     # # Define LLM chain
-    # llm  = ChatOpenAI(
+    llm  = ChatOpenAI(
+        temperature=temperature,
+        model_name=model_name,
+        api_key=openai_api_key,
+        base_url=base_url,
+    )
+    # llm =ChatOllama(
     #     temperature=temperature,
-    #     model_name=model_name,
-    #     api_key=openai_api_key,
+    #     model=model_name,
     #     base_url=base_url,
-    # )
-    llm =Ollama(model="mistral")
+    #     )
     
     #split pdf doc to vector
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
