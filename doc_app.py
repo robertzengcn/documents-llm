@@ -15,9 +15,9 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_URL = os.getenv("OPENAI_URL")
 
 
-st.title("Invoice Content Extract")
+st.title("Document Content Extract")
 st.write(
-    "This is a simple document analyzer that uses LLM models to summarize and answer questions about documents. "
+    "This is a simple document analyzer that uses LLM extract information from documents. "
     "You can upload a PDF or text file and the model will summarize the document and answer questions about it."
 )
 
@@ -25,7 +25,7 @@ with st.sidebar:
     st.header("Model")
 
     model_name = st.text_input("Model name", value=MODEL_NAME)
-
+    
     temperature = st.slider("Temperature", value=0.1, min_value=0.0, max_value=1.0)
 
     st.header("Document")
@@ -85,5 +85,5 @@ if st.button("Run"):
         if result:
             with st.container(border=True):
                 st.header("Result")
-                st.markdown(result)
+                st.json(result)
                 st.info(f"Time taken: {time.time() - start:.2f} seconds", icon="⏱️")
